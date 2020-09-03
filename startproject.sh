@@ -1,5 +1,3 @@
 #!/bin/sh
 
-sh changeprojectname.sh $1
-
-docker-compose run --rm -v $(pwd)/../:/code django django-admin startproject --template=djangodock/django/template $1 . 
+docker run --rm -v $(pwd)/../:/code -w /code python:3 bash -c "pip install -r djangodock/django/requirements.txt && django-admin startproject --template djangodock/django/template -e ini ${1} ."

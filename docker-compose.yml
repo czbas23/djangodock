@@ -38,7 +38,7 @@ services:
     volumes:
       - ${APP_CODE_PATH_HOST}:${APP_CODE_PATH_CONTAINER}${APP_CODE_CONTAINER_FLAG}
       - ${DJANGO_ENTRYPOINT}:/entrypoint.sh
-      - ${DJANGO_UWSGI_INI}:/uwsgi.ini
+      - ${DJANGO_UWSGI_INI}:/code/uwsgi.ini
   postgres:
     build:
       context: postgres

@@ -14,6 +14,10 @@ fi
 python manage.py migrate
 python manage.py collectstatic --noinput
 
-uwsgi --ini /uwsgi.ini
+if [ -f "/code/uwsgi.ini" ]; then
+  uwsgi --ini /code/uwsgi.ini
+else 
+  python manage.py runserver 0.0.0.0:8000
+fi
 
 exec "$@"

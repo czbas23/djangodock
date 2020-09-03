@@ -29,7 +29,7 @@ COMPOSE_FILE=docker-compose.yml
 COMPOSE_PATH_SEPARATOR=:
 
 # Define the prefix of container names. This is useful if you have multiple projects that use laradock to have separate containers per project.
-COMPOSE_PROJECT_NAME=laradock
+COMPOSE_PROJECT_NAME=djangodock
 
 ### WORKSPACE #############################################
 
@@ -44,7 +44,7 @@ NGINX_HOST_LOG_PATH=./logs/nginx/
 ### DJANGO #############################################
 
 DJANGO_PYTHON_VERSION=3.8.5
-DJANGO_UWSGI_INI=./django/uwsgi.ini
+DJANGO_UWSGI_INI=../uwsgi.ini
 DJANGO_ENTRYPOINT=./django/entrypoint.sh
 DJANGO_DEBUG=True
 DJANGO_SECRET_KEY=xt^+27d5-g)23xxp8_39tox4v@67551g1(#@x@#771ec1ty*6y
